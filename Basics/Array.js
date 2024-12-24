@@ -22,4 +22,5 @@ const a = [1,2,3];
 const b = [4,5,6];
 const c = [7,8,9];
 console.log(a.concat(b,c));//combines two or more array and returns new array without modifying existing array
+console.log(typeof a);
 
