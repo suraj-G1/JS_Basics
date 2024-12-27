@@ -6,6 +6,58 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="suraj">Suraj Gund</h1>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+    <input type="text" placeholder="Enter Coding Language"/>
+    <button>Add Language</button>
+    
 </body>
+<script>
+    // const button = document.querySelector('button');
+    // button.addEventListener('click',()=>{
+    //     console.log("Button Clicked");
+    //     const language = document.querySelector('input').innerText || "Python";
+    //     console.log(language);
+    //     addLanguage(language);
+    // })
+
+    //adding
+    function addLanguage(name){
+        
+        const addList = document.createElement('li');
+        //travles whole tree
+        addList.innerText= `${name}`;
+        document.querySelector('.language').appendChild(addList);
+    }
+    addLanguage("Golang")
+
+    //adding optimized
+
+    function addOptimize(name){
+        const li = document.createElement('li');
+        //directly creates text node without traversing whole tree
+        li.appendChild(document.createTextNode(name));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptimize("Ruby")
+
+    //Editing Element
+    function editElement(){
+        const secondLang = document.querySelector('li:nth-child(1)');
+        console.log(secondLang);
+        secondLang.textContent = "Rust"
+    }
+    editElement();
+
+    //deleting element
+    function deleteElement(){
+        const toDelete =  document.querySelector('li:last-child');
+        toDelete.remove();
+    }
+    deleteElement();
+
+
+</script>
 </html>
