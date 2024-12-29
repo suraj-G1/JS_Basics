@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="insert">Insert any key and See Magic</h1>
+</body>
+<script>
+    const insert = document.getElementById('insert');
+    window.addEventListener('keydown',(e)=>{
+        // console.log(e);
+        insert.innerHTML = `
+                <div>
+                    <table>
+                    <tr>
+                        <thead>Key</thead>
+                        <thead>Key Code</thead>
+                        <thead>Code</thead>
+                    </tr>
+
+                    <tr>
+                        <td>${e.key}</td>
+                        <td>${e.keyCode}</td>
+                        <td>${e.code}</td>
+                    </tr>
+                </table>
+                </div>
+        `
+        
+    })
+</script>
+</html>

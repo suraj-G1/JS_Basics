@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Color Changer</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const start = document.getElementById('start');
+    const stop = document.getElementById('stop');
+    let interval;
+    function getRandomColor(){
+        let string="#"
+        const letter = "0123456789ABCDEF"
+        for(let i=0;i<6;i++){
+            string += letter[Math.floor(Math.random()*16)];
+        }
+        return string;
+    }
+    start.addEventListener('click',()=>{
+        if(!interval){
+            interval = setInterval(()=>{
+                const color = getRandomColor();
+                document.body.style.backgroundColor = color;
+            },1000);
+        }
+    })
+
+    stop.addEventListener('click',()=>{
+        clearInterval(interval);
+        interval = null;
+    })
+</script>
+</html>
