@@ -37,3 +37,15 @@ const obj = {
     }
 }
 console.log(typeof obj.myFunction);
+
+// const some = "22abc";
+// const someString = "33abc";
+// const someNumber = Number(some);
+// console.log(someNumber);
+// const someNumber1 = parseInt(someString);
+// console.log( typeof someNumber1);
+// console.log("abc">=0);
+
+console.log("abc" / "def");
+
+

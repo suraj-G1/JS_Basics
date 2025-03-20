@@ -12,15 +12,23 @@ console.log(arr);
 
 
 const newArray = arr.slice(0,3);//1.creates shallow copy of original 2.Doesn't change the original array 3.takes startIndex and endIndex as parameters
-const newArray1 = arr.splice(0,2);//1.can take 3 parament startIndex,deleteCount and Items to add(can be multiple) 2.Change in original array
+const newArray1 = arr.splice(0,2);//1.can take 3 parameter startIndex,deleteCount and Items to add(can be multiple) 2.Change in original array
 console.log(newArray1);
 console.log(arr);
 const newArray2 = arr+newArray+newArray1;
-console.log(newArray2);
+console.log("new Array",newArray2);
 
 const a = [1,2,3];
 const b = [4,5,6];
 const c = [7,8,9];
 console.log(a.concat(b,c));//combines two or more array and returns new array without modifying existing array
+
+
+//Spread Operator
+const d = [...a,...b];
+console.log(d);
 console.log(typeof a);
+
+console.log(d.splice(1,4,...c));
+console.log(d);
 
