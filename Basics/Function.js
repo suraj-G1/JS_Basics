@@ -30,6 +30,11 @@ const arrowFunction = ()=>{
 }
 arrowFunction();
 
+function normalFunction(){
+    console.log(this);
+}
+normalFunction();
+
 //IIFE - Immediately Invoked Fuction Expression
 (function iife(){
     console.log("IIFE Function executed")

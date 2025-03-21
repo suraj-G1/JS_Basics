@@ -1,6 +1,6 @@
 //For loop
-for(let index=0;index<=10;index++){
-    console.log(index);
+for(let i=0;i<=10;i++){
+    console.log(i);
 }
 
 //While Loop
@@ -30,8 +30,8 @@ const obj={
 }
 
 //for objects and array
-for (const value in obj ) {
-    console.log(obj[value]);
+for (const key in obj ) {
+    console.log(key);
 }
 
 //forEach loop

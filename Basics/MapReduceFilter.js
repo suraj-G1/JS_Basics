@@ -9,3 +9,7 @@ const addition = arr.reduce((acc,curr)=>{
 console.log(addition);
 
 
+const add = arr.map((num)=>num+10);
+console.log(arr);
+console.log(add)
+
