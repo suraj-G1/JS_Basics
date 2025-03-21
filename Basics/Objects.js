@@ -6,6 +6,8 @@ const human={
     isLoggedIn:false
 
 }
+human.abc = "abc";
+console.log(human);
 console.log(human["full name"]);
 console.log(human.isLoggedIn);
 
@@ -14,6 +16,7 @@ const sym = Symbol(123);
 const obj = {
     [sym]:"Suraj"
 }
+console.log("Here",obj);
 
 console.log(obj);
 
@@ -34,4 +37,10 @@ console.log(c);
 
 const {name} = human;
 console.log(name);
+
+
+//Looping through Keys and Values of Object
+console.log(Object.keys(human));
+console.log(Object.values(human));
+console.log(Object.entries(human));
 
